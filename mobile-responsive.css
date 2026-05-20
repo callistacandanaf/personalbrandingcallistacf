@@ -1,0 +1,700 @@
+/* ══════════════════════════════════════
+   COMPREHENSIVE MOBILE RESPONSIVE
+   For all devices: tablet, phone, small screens
+══════════════════════════════════════ */
+
+/* ── LARGE TABLET (iPad landscape) — 1024px ── */
+@media screen and (max-width: 1024px) {
+  /* Navbar adjustments */
+  .navbar { padding: 0 4%; height: 64px; }
+  .nav-logo { font-size: 1.2rem; }
+  
+  /* Bento grid */
+  .bento { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .bc-hero { grid-column: span 2; padding: 40px 32px; }
+  .bc-desc { grid-column: span 1; }
+  
+  /* CV layout */
+  .cv-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .cv-left { width: 100%; }
+  
+  /* About cards */
+  .about-cards { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  
+  /* Skills */
+  .skills-top { grid-template-columns: 1fr; gap: 20px; }
+  .soft-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  
+  /* Achievements */
+  .achieve-grid { grid-template-columns: repeat(2, 1fr); }
+  .ach-card--featured { grid-column: span 1; flex-direction: column !important; }
+  
+  /* Font sizing */
+  .page-banner h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+  .bc-hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+}
+
+/* ── TABLET (iPad portrait) — 768px ── */
+@media screen and (max-width: 768px) {
+  /* Reset body and root styles */
+  html { font-size: 15px; }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0 4%;
+    height: 56px;
+    gap: 12px;
+  }
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: white;
+    padding: 16px 4%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    gap: 1rem;
+    border-top: 2px solid var(--pink-mid);
+    z-index: 998;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover {
+    background: var(--pink-soft);
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Home page */
+  .home-wrap {
+    padding: 40px 4% 60px;
+    gap: 20px;
+  }
+  
+  /* Bento grid */
+  .bento {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 100%;
+  }
+  .bc {
+    border-radius: 16px;
+    padding: 24px;
+  }
+  
+  /* Hero card */
+  .bc-hero {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+    gap: 16px;
+    align-items: center;
+  }
+  .bc-hero::before {
+    font-size: 8rem;
+    right: -20px;
+    top: -30px;
+  }
+  .hero-photo-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .bc-hero-photo {
+    transform: scale(1.2);
+  }
+  .bc-hero-text {
+    width: 100%;
+  }
+  .bc-hero-text h1 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+  .bc-hero-text .nick {
+    font-size: 0.85rem;
+  }
+  .bc-hero-text .tagline {
+    font-size: 0.9rem;
+  }
+  .bc-hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .bc-hero .btn-white,
+  .bc-hero .btn-border {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+  
+  /* Photo card */
+  .bc-photo {
+    grid-column: 1 / -1;
+    min-height: 180px;
+  }
+  .bc-photo img,
+  .bc-photo-ph {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Desc and taglist cards */
+  .bc-desc {
+    grid-column: 1 / -1;
+    padding: 20px;
+  }
+  .bc-desc h3 {
+    font-size: 1rem;
+  }
+  .bc-desc p {
+    font-size: 0.9rem;
+  }
+  
+  .bc-taglist {
+    grid-column: 1 / -1;
+    padding: 20px;
+  }
+  .bc-taglist h3 {
+    font-size: 0.75rem;
+  }
+  .tags {
+    gap: 8px;
+  }
+  .tag {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+  
+  /* Quote card */
+  .bc-quote {
+    grid-column: 1 / -1;
+    padding: 24px;
+  }
+  .bc-quote p {
+    font-size: 1rem;
+  }
+  
+  /* Page banner */
+  .page-banner {
+    padding: 48px 4% 40px;
+  }
+  .page-banner h1 {
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  }
+  .page-banner p {
+    font-size: 0.9rem;
+  }
+  .banner-chip {
+    font-size: 0.75rem;
+  }
+  
+  /* About page */
+  .about-wrap {
+    padding: 60px 4% 80px;
+  }
+  .about-masthead {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+  .about-sidebar {
+    padding: 32px 24px;
+    gap: 20px;
+  }
+  .about-sidebar h2 {
+    font-size: 1.3rem;
+  }
+  .about-body-right {
+    padding: 32px 24px;
+  }
+  .about-body-right h3 {
+    font-size: 1.1rem;
+  }
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 4%;
+  }
+  .acard {
+    padding: 24px;
+  }
+  .acard h4 {
+    font-size: 0.95rem;
+  }
+  .acard p,
+  .acard ul li {
+    font-size: 0.85rem;
+  }
+  
+  /* Skills page */
+  .skills-wrap {
+    padding: 40px 4% 60px;
+  }
+  .skills-top {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sk-card {
+    padding: 24px;
+  }
+  .sk-card h3 {
+    font-size: 1rem;
+  }
+  .skill-label {
+    font-size: 0.8rem;
+  }
+  .soft-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .soft-tile {
+    padding: 16px;
+  }
+  .soft-tile h4 {
+    font-size: 0.75rem;
+  }
+  
+  /* CV page */
+  .cv-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 4% 60px;
+  }
+  .cv-left {
+    width: 100%;
+  }
+  .cv-profile {
+    padding: 28px 20px;
+  }
+  .cv-profile h3 {
+    font-size: 1.1rem;
+  }
+  .cv-right {
+    width: 100%;
+  }
+  .cv-block {
+    padding: 24px;
+  }
+  .cv-block-head {
+    font-size: 1rem;
+  }
+  .cv-tbl td {
+    font-size: 0.8rem;
+  }
+  .cv-tl-body h4 {
+    font-size: 0.85rem;
+  }
+  
+  /* Portfolio page */
+  .portfolio-wrap {
+    padding: 40px 4% 60px;
+  }
+  .slider-container {
+    padding: 0 50px;
+  }
+  .slider-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+  .slider-prev {
+    left: 4px;
+  }
+  .slider-next {
+    right: 4px;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .proj-card-new {
+    height: 280px;
+  }
+  .proj-preview {
+    height: 120px;
+  }
+  
+  /* Achievements */
+  .achieve-section {
+    padding: 16px 4% 48px;
+  }
+  .achieve-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0;
+  }
+  .ach-card {
+    padding: 18px;
+  }
+  .ach-card--featured {
+    grid-column: span 1;
+    flex-direction: column !important;
+    padding: 20px !important;
+    gap: 16px !important;
+  }
+  .ach-card--featured .ach-img-wrap {
+    width: 100%;
+    height: 140px;
+  }
+  .ach-body h4 {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 4%;
+    gap: 16px;
+  }
+  .social-row {
+    justify-content: center;
+  }
+  
+  /* Disable custom cursor on tablet for better UX */
+  @media (hover: none) and (pointer: coarse) {
+    html { cursor: auto; }
+    .custom-cursor { display: none; }
+    * { cursor: auto !important; }
+  }
+}
+
+/* ── MOBILE (phone portrait) — 640px ── */
+@media screen and (max-width: 640px) {
+  html { font-size: 14px; }
+  
+  /* Navbar */
+  .navbar { height: 52px; padding: 0 3%; }
+  .nav-logo { font-size: 1rem; }
+  .hamburger span { width: 20px; height: 2px; }
+  
+  /* Home page */
+  .home-wrap { padding: 32px 3% 48px; gap: 12px; }
+  
+  .bento { gap: 12px; }
+  .bc { padding: 20px; border-radius: 14px; }
+  
+  /* Hero */
+  .bc-hero {
+    padding: 24px 16px;
+    gap: 12px;
+  }
+  .hero-photo-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .bc-hero-text h1 {
+    font-size: 1.2rem;
+  }
+  .bc-hero-text .nick {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  .bc-hero-text .tagline {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+  }
+  .bc-hero-btns { width: 100%; }
+  
+  /* Photo card */
+  .bc-photo {
+    min-height: 160px;
+  }
+  .bc-photo img,
+  .bc-photo-ph {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Cards */
+  .bc-desc,
+  .bc-taglist,
+  .bc-quote {
+    padding: 18px;
+  }
+  .bc-desc h3,
+  .bc-taglist h3 { font-size: 0.95rem; }
+  .bc-desc p { font-size: 0.88rem; }
+  .bc-quote p { font-size: 0.95rem; }
+  
+  .tag { padding: 4px 10px; font-size: 0.7rem; }
+  
+  /* Page banner */
+  .page-banner { padding: 40px 3% 32px; }
+  .page-banner h1 { font-size: clamp(1.3rem, 3vw, 2rem); }
+  .page-banner p { font-size: 0.85rem; }
+  
+  /* About page */
+  .about-wrap { padding: 40px 3% 60px; }
+  .about-masthead { border-radius: 14px; }
+  .about-sidebar { padding: 24px 16px; gap: 16px; }
+  .about-sidebar h2 { font-size: 1.2rem; }
+  .about-sidebar p { font-size: 0.85rem; }
+  .about-body-right { padding: 24px 16px; }
+  .about-body-right h3 { font-size: 1rem; }
+  .about-cards { grid-template-columns: 1fr; padding: 32px 3%; gap: 12px; }
+  .acard { padding: 18px; }
+  .acard h4 { font-size: 0.9rem; }
+  .acard p { font-size: 0.8rem; }
+  
+  /* Skills page */
+  .skills-wrap { padding: 32px 3% 48px; }
+  .sk-card { padding: 18px; }
+  .sk-card h3 { font-size: 0.95rem; }
+  .skill-label { font-size: 0.75rem; }
+  .soft-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .soft-tile { padding: 14px; }
+  .soft-tile h4 { font-size: 0.7rem; }
+  .soft-tile p { font-size: 0.65rem; }
+  
+  /* CV page */
+  .cv-wrap { padding: 32px 3% 48px; }
+  .cv-profile { padding: 20px; }
+  .cv-profile h3 { font-size: 1rem; }
+  .cv-panel { padding: 16px; }
+  .cv-panel-title { font-size: 0.7rem; margin-bottom: 12px; }
+  .cv-info-row { padding: 6px 0; gap: 8px; }
+  .cv-block { padding: 18px; }
+  .cv-block-head { font-size: 0.95rem; }
+  .cv-tbl td { font-size: 0.75rem; padding: 6px 0; }
+  
+  /* Portfolio page */
+  .portfolio-wrap { padding: 32px 3% 48px; }
+  .slider-container { padding: 0 40px; }
+  .slider-btn { width: 40px; height: 40px; font-size: 0.9rem; }
+  .project-grid { grid-template-columns: 1fr; gap: 12px; }
+  .proj-card-new { height: 260px; }
+  .proj-preview { height: 100px; }
+  .proj-body-new { padding: 10px 12px 12px; gap: 5px; }
+  
+  /* Achievements */
+  .achieve-section { padding: 12px 3% 40px; }
+  .achieve-grid { gap: 12px; }
+  .ach-card { padding: 14px; gap: 10px; }
+  .ach-img-wrap { height: 110px; }
+  .ach-body h4 { font-size: 0.85rem; }
+  .ach-body p { font-size: 0.75rem; }
+  
+  /* Footer */
+  .footer { padding: 24px 3%; }
+  .footer p { font-size: 0.8rem; }
+  
+  /* Disable custom cursor */
+  html { cursor: auto; }
+  .custom-cursor { display: none; }
+  * { cursor: auto !important; }
+}
+
+/* ── SMALL MOBILE (small phones) — 480px ── */
+@media screen and (max-width: 480px) {
+  html { font-size: 13px; }
+  
+  body { overflow-x: hidden; }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0 2.5%;
+    height: 48px;
+    gap: 8px;
+  }
+  .nav-logo { font-size: 0.9rem; }
+  
+  /* Home */
+  .home-wrap { padding: 24px 2.5% 40px; gap: 10px; }
+  .bento { gap: 10px; }
+  .bc { padding: 16px; border-radius: 12px; }
+  
+  /* Hero */
+  .bc-hero { padding: 20px 12px; }
+  .hero-photo-wrapper { width: 90px; height: 90px; }
+  .bc-hero-text h1 { font-size: 1.1rem; }
+  .bc-hero-text .nick { font-size: 0.75rem; }
+  .bc-hero-text .tagline { font-size: 0.8rem; padding: 3px 10px; }
+  .bc-hero-btns { flex-direction: column; width: 100%; gap: 8px; }
+  .bc-hero .btn-white,
+  .bc-hero .btn-border {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  
+  /* Photo card */
+  .bc-photo { min-height: 140px; }
+  .bc-photo img,
+  .bc-photo-ph { width: 70px; height: 70px; }
+  
+  /* Cards */
+  .bc-desc,
+  .bc-taglist,
+  .bc-quote { padding: 14px; }
+  .bc-desc h3,
+  .bc-taglist h3 { font-size: 0.85rem; margin-bottom: 8px; }
+  .bc-desc p { font-size: 0.8rem; line-height: 1.6; }
+  .bc-quote p { font-size: 0.85rem; }
+  
+  .tags { gap: 6px; }
+  .tag { padding: 3px 8px; font-size: 0.65rem; }
+  
+  /* Page banner */
+  .page-banner { padding: 32px 2.5% 24px; }
+  .page-banner h1 { font-size: clamp(1.2rem, 2.8vw, 1.8rem); }
+  .page-banner p { font-size: 0.8rem; }
+  .banner-chip { font-size: 0.65rem; }
+  
+  /* All pages adjustments */
+  .about-wrap,
+  .skills-wrap,
+  .portfolio-wrap,
+  .cv-wrap,
+  .achieve-section {
+    padding: 24px 2.5% 40px;
+  }
+  
+  .about-sidebar { padding: 20px 12px; }
+  .about-body-right { padding: 20px 12px; }
+  .about-cards { padding: 24px 2.5%; gap: 10px; }
+  
+  .sk-card { padding: 14px; }
+  .soft-row { gap: 8px; }
+  .soft-tile { padding: 12px; }
+  
+  .cv-profile { padding: 16px; }
+  .cv-left,
+  .cv-right { width: 100%; }
+  
+  .slider-container { padding: 0 30px; }
+  .slider-btn { width: 36px; height: 36px; font-size: 0.8rem; }
+  
+  .achieve-grid { padding: 0; gap: 10px; }
+  .ach-card { padding: 12px; }
+  .ach-img-wrap { height: 100px; }
+  
+  /* Footer */
+  .footer { padding: 20px 2.5%; gap: 12px; }
+  .footer p { font-size: 0.75rem; }
+  .footer-logo { font-size: 0.95rem; }
+  .social-link { width: 34px; height: 34px; }
+  
+  /* Increase touch targets */
+  .btn, .tag, .pill, .proj-btn, .slider-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ── EXTRA SMALL (very small phones) — 360px ── */
+@media screen and (max-width: 360px) {
+  html { font-size: 12px; }
+  
+  .navbar { padding: 0 2%; }
+  .nav-logo { font-size: 0.85rem; }
+  
+  .home-wrap { padding: 20px 2% 32px; }
+  .bc { padding: 14px; }
+  
+  .bc-hero {
+    padding: 16px 10px;
+    gap: 10px;
+  }
+  .hero-photo-wrapper { width: 80px; height: 80px; }
+  .bc-hero-text h1 { font-size: 1rem; }
+  
+  .bc-desc h3,
+  .bc-taglist h3 { font-size: 0.8rem; }
+  .bc-desc p { font-size: 0.75rem; }
+  
+  .page-banner { padding: 24px 2%; }
+  .page-banner h1 { font-size: 1.1rem; }
+  
+  .tag { padding: 2px 6px; font-size: 0.6rem; }
+}
+
+/* ── LANDSCAPE MODE ADJUSTMENTS ── */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  /* Hide heavy animations in landscape on small devices */
+  .fu, .fu1, .fu2, .fu3,
+  .reveal-ready, .reveal-left, .reveal-right,
+  .float-emoji {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .home-wrap { padding: 20px 4%; gap: 12px; min-height: auto; }
+  .bento { gap: 12px; }
+  
+  .bc-hero {
+    padding: 24px;
+    flex-direction: row;
+    gap: 20px;
+    min-height: auto;
+  }
+  .hero-photo-wrapper { width: 100px; height: 100px; }
+  
+  .nav-links { top: 48px; }
+}
+
+/* ── TOUCH DEVICE OPTIMIZATIONS ── */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable custom cursor on touch devices */
+  html { cursor: auto; }
+  .custom-cursor { display: none !important; }
+  *, *::before, *::after { cursor: auto !important; }
+  
+  /* Increase button/touch target sizes */
+  .btn, button, .tag, .pill, .slider-btn, a[href], .proj-btn {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 10px 16px;
+  }
+  
+  /* Remove hover animations, use active instead */
+  .bc:hover { transform: none; }
+  .tag:hover { animation: none; }
+  
+  /* Add tap feedback */
+  .bc, .acard, .tag, .pill, .btn, button {
+    transition: background-color 0.15s, box-shadow 0.15s;
+  }
+  
+  .bc:active, .acard:active { box-shadow: inset 0 0 8px rgba(233,30,99,0.2); }
+  
+  /* Disable scroll reveal animations on mobile for performance */
+  .reveal-ready, .reveal-left, .reveal-right,
+  .proj-card-new, .ach-card {
+    animation: none !important;
+  }
+  .reveal-ready, .proj-card-new, .ach-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  .navbar, .footer, .hamburger, .slider-btn, #back-to-top, #theme-toggle {
+    display: none;
+  }
+  .page-banner, .bc, .acard, .sk-card, .cv-panel, .cv-block, .ach-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+}
